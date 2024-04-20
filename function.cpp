@@ -7,16 +7,23 @@ int welcome(int command)
 {
 	if (command == 1)
 	{
-		std::cout << "欢迎使用GitToolkit" << endl;
+		cout << "欢迎使用GitToolkit" << endl;
 	}
 	return 1;
 }
 
 int init(string command)
 {
-	if ((command.compare("gITHUB")) == 0)
+	string git;
+	if ((command.compare("Github")) == 0)
 	{
-		std::cout << "GitToolkit遇到问题，我们需要重启！" << endl << "请将此错误代码反馈给支持：程序未开发完成！";
+		cout << "正在初始化 Github仓库。" << endl << "请输入仓库Git地址：";
+		cin >> git;
+		system("git init");
+		string gitcommand = "git remote add github " + git;
+		system(gitcommand.c_str());
+		system("git branch -M main");
+		cout << "初始化 Github仓库完成！";
 	}
 	return 0;
 }
