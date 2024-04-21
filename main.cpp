@@ -14,13 +14,19 @@ int main()
 	}
 	if (command == 2)
 	{
-		cout << "版本管理" << endl << "1.初始化仓库";
+		cout << "版本管理" << endl << "1.初始化仓库" << endl << "2.自动提交代码";
 		cin >> command;
 		if (command == 1)
 		{
-			init();
+			versioning_init();
 			cout << "输入数字以退出。";
 		}
+		if (command == 2)
+		{
+			versioning_push();
+			cout << "输入数字以退出。";
+		}
+		
 	}
 	return 0;
 }

@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int init()
+int network_github()
 {
 	string git;
 	cout << "正在初始化 Github仓库。" << endl << "请输入仓库Git地址：";
