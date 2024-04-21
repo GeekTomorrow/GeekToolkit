@@ -12,7 +12,7 @@ endif()
 project ("GeekToolkit")
 
 # 将源代码添加到此项目的可执行文件。
-add_executable (GeekToolkit "main.cpp"  "git.h" "git.cpp" "head.h")
+add_executable (GeekToolkit "main.cpp" "versioning/main.h" "versioning/main.cpp" "network/main.h" "network/main.cpp" "head.h")
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET GeekToolkit PROPERTY CXX_STANDARD 20)
